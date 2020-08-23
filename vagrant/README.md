@@ -2,6 +2,7 @@
 Prerequisite on Windows:
 1. Install Vagrant : ##download your selected OS and Install.  ##https://www.vagrantup.com/downloads
 2. Install VirtualBox 
+
 Optional: 
 3. Git bash
 
