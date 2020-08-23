@@ -1,9 +1,7 @@
 ### HOW TO INSTALL AND SETUP KUBERNETES CLUSTER LAB USING VAGRANT
 Prerequisite on Windows:
 1. Install Vagrant : ##download your selected OS and Install.  ##https://www.vagrantup.com/downloads
-2. Install VirtualBox 
-
-Optional: 
+2. Install VirtualBox  
 3. Git bash
 
 
