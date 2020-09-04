@@ -1,3 +1,9 @@
+#### Disable swap 
+$  sudo -i
+$  swapoff -a
+$  exit
+$  strace -eopenat kubectl version
+
 ##Install Docker on all worker and master nodes
 
 #Follow instruction : https://docs.docker.com/engine/install/debian/
@@ -49,6 +55,15 @@ $ sudo systemctl enable kubelet
 $ kubeadm init
 OR
 $ kubeadm init --apiserver-advertise-address=192.168.56.11 --pod-network-cidr=10.244.0.0/16
+
+
+####If kubeadm init get success and then failed to connect 6443 :
+
+#### Disable swap 
+$  sudo -i
+$  swapoff -a
+$  exit
+$  strace -eopenat kubectl version
 
 ##Deploy Pod Network Flannel
 kubectl create -f https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml
