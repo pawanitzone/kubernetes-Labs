@@ -28,5 +28,9 @@ sudo curl -fsSLo /usr/share/keyrings/kubernetes-archive-keyring.gpg https://pack
 echo "deb [signed-by=/usr/share/keyrings/kubernetes-archive-keyring.gpg] https://apt.kubernetes.io/ kubernetes-xenial main" | sudo tee /etc/apt/sources.list.d/kubernetes.list
 sudo apt-get update -y
 sudo apt-get install -y kubelet kubeadm kubectl
-
+sudo systemctl daemon-reload
+sudo systemctl enable docker
+sudo systemctl enable kubelet
+sudo systemctl restart docker
+sudo systemctl restart kubelet
 ###Run if OS=CentOS then run these commands
