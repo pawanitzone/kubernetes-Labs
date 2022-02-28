@@ -12,3 +12,8 @@ sudo apt-get install docker-ce docker-ce-cli containerd.io -y
 cat <<EOF | sudo tee /etc/docker/daemon.json
 { "exec-opts": ["native.cgroupdriver=systemd"] }
 EOF
+
+##start docker
+sudo systemctl daemon-reload
+sudo systemctl enable docker
+sudo systemctl restart docker
