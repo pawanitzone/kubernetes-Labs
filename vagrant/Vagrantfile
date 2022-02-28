@@ -46,6 +46,7 @@ Vagrant.configure("2") do |config|
 
         config.vm.provision "shell", path: "ubuntu/update-dns.sh"
         config.vm.provision "shell", path: "ubuntu/install-docker.sh"
+	config.vm.provision "shell", path: "ubuntu/kubeadm-install.sh"
         node.vm.provision "file", source: "./ubuntu/cert_verify.sh", destination: "$HOME/"
 
       end
@@ -69,6 +70,7 @@ Vagrant.configure("2") do |config|
 
         config.vm.provision "shell", path: "ubuntu/update-dns.sh"
         config.vm.provision "shell", path: "ubuntu/install-docker.sh"
+	config.vm.provision "shell", path: "ubuntu/kubeadm-install.sh"
         node.vm.provision "file", source: "./ubuntu/cert_verify.sh", destination: "$HOME/"
 
     end
